@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <style>
+    html {
+      font-family: sans-serif;
+      font-weight: inherit;
+    }
+    body {
+      font-weight: inherit;
+    }
+    a {
+      text-decoration: none;
+      color: #666;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .hide {
+      display: none;
+    }
+    /* 头部css */
+    /* 头部css */
+    .navbar-brand {
+      width: 65%;
+    }
+    .navbar-toggler{
+      padding: .2rem .5rem
+    }
+    .navbar-toggler:focus{
+      outline: transparent;
+    }
+    .navbar-brand img {
+      width: 100%;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler span {
+      display: inline-block;
+    }
+    .navbar-toggler img {
+      width: 80%;
+      max-width: 30px;
+    }
+    
+    /* 内容 */
+    /* 内容 */
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px 0;
+      color: #38a7df;
+      background: url('img/title-bg.png') no-repeat center;
+      /* font-size: 1.5rem; */
+      font-size: 1.2rem;
+    }
+    /* 公司信息 */
+    .news {
+      margin-top: 30px;
+    }
+    .secttion-container .row {
+      padding: 12px;
+      text-align: center;
+    }
+    .secttion-container .row>div {
+      padding: 10px;
+      padding-bottom: 0;
+    }
+    .secttion-container .row>div>a {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      padding: 12px;
+      padding-bottom: 0px;
+      background-color: #43B2E9;
+    }
+    .secttion-container .row img{
+      width: 100%;
+      max-width: 200px;
+      height: 100px;
+    }
+    .about-title {
+      padding: 5px 0;
+    }
+    /* 首页模态菜单 */
+    .modal-ul {
+      margin-top: 50px;
+      width: 100%;
+      height: 100%;
+    }
+    .modal-ul li {
+      text-align: center;
+      width: 100%;
+      height: 70px;
+      margin-bottom: 10px;
+    }
+    .modal-ul li.close{
+      margin-top: 30px;
+    }
+    .modal-ul li a {
+      display: inline-block;
+      height: 100%;
+      line-height: 70px;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    .modal-ul li a .icon {
+      text-align: center;
+      display: inline-block;
+    }
+    .modal-ul li a .icon img {
+      text-align: center;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+    .modal-ul li.close a .icon img {
+      margin-right: 0;
+    }
+    .modal-ul li a .icon .text {
+      vertical-align: middle;
+    }
+    .modal-backdrop{
+      opacity:0.8 !important;
+    }
+    /* 脚部 */
+    .footer {
+      font-size: 0.9rem;
+      color: #fff;
+      height: 4rem;
+      line-height: 4rem;
+      text-align: center;
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+      <button class="navbar-toggler" id='collapse' data-toggle="collapse" type="button" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> <img src="img/toggle-icon.png" alt=""></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active J_nav" data-section='1'>
+            <a class="nav-link J_title" href="javascript:;">400A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='2'>
+            <a class="nav-link J_title" href="javascript:;">500A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='3'>
+            <a class="nav-link J_title" href="javascript:;">630A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='4'>
+            <a class="nav-link J_title" href="javascript:;">800A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='5'>
+            <a class="nav-link J_title" href="javascript:;">1000A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='6'>
+            <a class="nav-link J_title" href="javascript:;">1250A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='7'>
+            <a class="nav-link J_title" href="javascript:;">1600A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='8'>
+            <a class="nav-link J_title" href="javascript:;">2000A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='9'>
+            <a class="nav-link J_title" href="javascript:;">2500A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='10'>
+            <a class="nav-link J_title" href="javascript:;">3200A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='11'>
+            <a class="nav-link J_title" href="javascript:;">4000A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='12'>
+            <a class="nav-link J_title" href="javascript:;">5000A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='13'>
+            <a class="nav-link J_title" href="javascript:;">6300A密集型铜导体母线槽</a>
+          </li>
+          <li class="nav-item J_nav" data-section='14'>
+            <a class="nav-link J_title" href="javascript:;">插接箱</a>
+          </li>
+          <li class="nav-item J_nav" data-section='15'>
+            <a class="nav-link J_title" href="javascript:;">连接铜排</a>
+          </li>
+          <li class="nav-item J_nav" data-section='16'>
+            <a class="nav-link J_title" href="javascript:;">弯头</a>
+          </li>
+          <li class="nav-item J_nav" data-section='17'>
+            <a class="nav-link J_title" href="javascript:;">终端箱</a>
+          </li>
+          <li class="nav-item J_nav" data-section='18'>
+            <a class="nav-link J_title" href="javascript:;">软连接</a>
+          </li>
+          <li class="nav-item J_nav" data-section='19'>
+            <a class="nav-link J_title" href="javascript:;">其他</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <div class='news container'>
+      <div class='secttion-container J_section'>
+          <div class='section-title J_title'>400A密集型铜导体母线槽</div>
+          <div class="row">
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <a href="productdetail.html">
+                  <img src="img/product-list/1.jpg" alt="">
+                  <div class='about-title'>xxx产品</div>
+                </a>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                  <a href="productdetail.html">
+                      <img src="img/product-list/1.jpg" alt="">
+                    <div class='about-title'>xxx产品</div>
+                  </a>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                  <a href="productdetail.html">
+                      <img src="img/product-list/1.jpg" alt="">
+                    <div class='about-title'>xxx产品</div>
+                  </a>
+              </div>
+            </div>
+      </div>
+      <div class='secttion-container J_section hide'>
+          <div class='section-title J_title'>400A密集型铜导体母线槽</div>
+          <div class="row">
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <a href="productdetail.html">
+                  <img src="img/product-list/1.jpg" alt="">
+                  <div class='about-title'>xxx产品</div>
+                </a>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                  <a href="productdetail.html">
+                      <img src="img/product-list/1.jpg" alt="">
+                    <div class='about-title'>xxx产品</div>
+                  </a>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                  <a href="productdetail.html">
+                      <img src="img/product-list/1.jpg" alt="">
+                    <div class='about-title'>xxx产品</div>
+                  </a>
+              </div>
+            </div>
+      </div>
+      <div class='secttion-container J_section hide'>
+          <div class='section-title J_title'>400A密集型铜导体母线槽</div>
+          <div class="row">
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <a href="productdetail.html">
+                  <img src="img/product-list/1.jpg" alt="">
+                  <div class='about-title'>xxx产品</div>
+                </a>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                  <a href="productdetail.html">
+                      <img src="img/product-list/1.jpg" alt="">
+                    <div class='about-title'>xxx产品</div>
+                  </a>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                  <a href="productdetail.html">
+                      <img src="img/product-list/1.jpg" alt="">
+                    <div class='about-title'>xxx产品</div>
+                  </a>
+              </div>
+            </div>
+      </div>
+      <div class='secttion-container J_section hide'>
+          <div class='section-title J_title'>400A密集型铜导体母线槽</div>
+          <div class="row">
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <a href="productdetail.html">
+                  <img src="img/product-list/1.jpg" alt="">
+                  <div class='about-title'>xxx产品</div>
+                </a>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                  <a href="productdetail.html">
+                      <img src="img/product-list/1.jpg" alt="">
+                    <div class='about-title'>xxx产品</div>
+                  </a>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                  <a href="productdetail.html">
+                      <img src="img/product-list/1.jpg" alt="">
+                    <div class='about-title'>xxx产品</div>
+                  </a>
+              </div>
+            </div>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script>
+    var showSection = function (currentSection) {
+      let currentSectionDom = $('.J_section').addClass('hide').eq(currentSection-1)
+      let currentNavDom = $('.J_nav').removeClass('active').eq(currentSection-1)
+      currentSectionDom.removeClass('hide')
+      currentNavDom.addClass('active')
+      console.log(currentNavDom.find('.J_title').html())
+      currentSectionDom.find('.J_title').html(currentNavDom.find('.J_title').html())
+    }
+    $(function() { 
+      if (!location.search) return
+      var searh = location.search.split('?')[1]
+      var args = searh.split('&')
+      for (var i =0; i< args.length; i++) {
+        if (args[i].split('=')[0] == 'id') {
+          var currentSection = args[i].split('=')[1]
+          showSection(currentSection)
+        }
+      }
+    })
+    $('.J_nav').click(function() {
+      $('.J_nav').removeClass('active')
+      $('#collapse').click()
+      $(this).addClass('active')
+      let currentSection = $(this).attr('data-section')
+      showSection(currentSection)
+    })
+  </script>
+</body>
+</html>

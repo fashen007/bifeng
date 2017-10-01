@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <style>
+    html {
+      font-family: sans-serif;
+      font-weight: inherit;
+    }
+    body {
+      font-weight: inherit;
+    }
+    a {
+      text-decoration: none;
+      color: #666;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .hide {
+      display: none;
+    }
+    /* 头部css */
+    /* 头部css */
+    .navbar-brand {
+      width: 65%;
+    }
+    .navbar-toggler{
+      padding: .2rem .5rem
+    }
+    .navbar-toggler:focus{
+      outline: transparent;
+    }
+    .navbar-brand img {
+      width: 100%;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler span {
+      display: inline-block;
+    }
+    .navbar-toggler img {
+      width: 80%;
+      max-width: 30px;
+    }
+    
+    /* 内容 */
+    /* 内容 */
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px 0;
+      color: #38a7df;
+      background: url('img/title-bg.png') no-repeat center;
+      /* font-size: 1.5rem; */
+      font-size: 1.2rem;
+    }
+    /* 公司信息 */
+    .company-info {
+      margin-top: 30px;
+    }
+    .secttion-container p {
+      font-size: 0.9rem;
+      text-indent: 22px;
+      padding: 10px 0;
+    }
+    .secttion-container img {
+      width: 100%;
+      max-width: 800px;
+    }
+    .employ {
+      word-break: break-all;
+    }
+    /* 首页模态菜单 */
+    .modal-ul {
+      margin-top: 50px;
+      width: 100%;
+      height: 100%;
+    }
+    .modal-ul li {
+      text-align: center;
+      width: 100%;
+      height: 70px;
+      margin-bottom: 10px;
+    }
+    .modal-ul li.close{
+      margin-top: 30px;
+    }
+    .modal-ul li a {
+      display: inline-block;
+      height: 100%;
+      line-height: 70px;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    .modal-ul li a .icon {
+      text-align: center;
+      display: inline-block;
+    }
+    .modal-ul li a .icon img {
+      text-align: center;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+    .modal-ul li.close a .icon img {
+      margin-right: 0;
+    }
+    .modal-ul li a .icon .text {
+      vertical-align: middle;
+    }
+    .modal-backdrop{
+      opacity:0.8 !important;
+    }
+    /* 脚部 */
+    .footer {
+      font-size: 0.9rem;
+      color: #fff;
+      height: 4rem;
+      line-height: 4rem;
+      text-align: center;
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+      <button class="navbar-toggler" id='collapse' data-toggle="collapse" type="button" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> <img src="img/toggle-icon.png" alt=""></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active J_nav" data-section='1'>
+            <a class="nav-link" href="javascript:">关于我们</a>
+          </li>
+          <li class="nav-item J_nav" data-section='2'>
+            <a class="nav-link" href="javascript:">厂房设备</a>
+          </li>
+          <li class="nav-item J_nav" data-section='3'>
+            <a class="nav-link" href="javascript:">招贤纳士</a>
+          </li>
+          <li class="nav-item J_nav" data-section='4'>
+            <a class="nav-link" href="javascript:">客服中心</a>
+          </li>
+          <li class="nav-item J_nav" data-section='5'>
+            <a class="nav-link" href="javascript:">联系我们</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <div class='company-info container'>
+      <div class='secttion-container J_section about'>
+          <div class='section-title'>关于我们</div>
+          <p>
+              广州锐阁电气设备有限公司座落于美丽的国际大都市-广州，企业专业从事母线槽及相关配套产品的设计、研发、生产、销售及增值维保服务。公司成立于2011年，自成立以来坚持以人为本，质量第一的发展理念，坚持以创新、开放、直接、高效为原则，以提高客户体验为已任，推动中国制造迈向更好水平。
+          </p>
+          <img src="img/about/about-1.jpg" alt="">
+          <p>
+              公司现有员工100余名，其中专业技术人员占比35%。公司占地面积20000余平方米，建筑面积16000余平方米。公司配套母线槽行业最为领先的自动化铜排加工生产线、自动化连接器成型线、母线槽组装线及多台钳、磨、铣、剪、折、冲等设备。公司技术力量雄厚，生产经验丰富，质控体系健全，工节先进，管理严谨，检测设备及方法齐全，公司产品在各种建筑配电工程中得到广泛采用，获得业内专业人士和用户的广泛好评。
+          </p>
+          <img src="img/about/about-2.jpg" alt="">
+          <p>自公司创立以来，公司市场份额稳步提高，产品广泛应用于工厂、银行、酒店、医院、房地产、石油化工、钢铁、汽车、机械、建材、电厂、学校、体育场馆、数控中心、城市综合体等，产品运行后的优质表现深得广大客户的赞赏。
+          </p>
+          <img src="img/about/about-3.jpg" alt="">
+          <p>锐阁电气以节能降耗为目标，为提高用户体验和推动中国电气设备制造业迈向更高的水平而努力，欢迎各界朋友莅临参观、指导和业务洽谈</p>
+      </div>
+      <div class='secttion-container J_section facility hide'>
+          <div class='section-title'>厂房设备</div>
+          <img src="img/facility/1.jpg" alt="">
+          
+          <img src="img/facility/2.jpg" alt="">
+           
+          <img src="img/facility/3.jpg" alt="">
+          <img src="img/facility/4.jpg" alt="">
+          <img src="img/facility/5.jpg" alt="">
+          <img src="img/facility/6.jpg" alt="">
+          <img src="img/facility/7.jpg" alt="">
+      </div>
+      <div class='secttion-container J_section employ hide'>
+          <div class='section-title'>招贤纳士</div>
+          <span>对以下职位有意向者，请将简历发至：<a href="mailto:2419268124@qq.com">2419268124@qq.com </a></span>
+          <br/>
+          <br/>
+          <div>
+              母线槽销售人员 <br/> 
+              1、男女不限，38岁以下，高中或以上学历；<br/>
+              2、身体健康，能吃苦耐劳，肯自主钻研学习，具有良好的团队协助精神；<br/>
+              3、能承受工作压力，能独立完成业务拓展工作，能适应临时性出差；<br/>
+              4、1年以上母线槽业务营销经验或有2年以上营销建筑材料、成套设备、工程项目、开关元件等电气方面业务操作经验者可优先考虑，<br/>
+              工资待遇：工资+社保+提成+补助
+              <br/>
+              <br/>
+
+              焊工：<br/>
+              
+              1.   25-35岁，初中以上学历.有焊工证.<br/>
+              
+              2.    会焊铜、铝、钣金等材料，愿意到安装工地现场工作。<br/>
+              3.    能吃苦耐劳，身体健康。能适应出差。<br/>
+              工资待遇：工资+社保+奖金
+              
+              <br/><br/>
+              母线槽熟练生产工：<br/>
+              1.20-40岁，初中以上学历，有母线槽生产工经验。<br/>
+              2. 能吃苦耐劳，身体健康。能适应出差。<br/>
+          </div>
+      </div>
+      <div class='secttion-container J_section service hide'>
+          <div class='section-title'>客服中心</div>
+          <img src="img/service.jpg" alt="">
+      </div>
+      <div class='secttion-container J_section concat hide'>
+          <div class='section-title'>联系我们</div>
+          <div> 
+              地址：广州市增城区新塘镇白石村白石路3号 <br/>
+              电话：020-82296369，传真：020-82297232 <br/>
+              全国服务热线：13925029577/13928859556 <br/>
+              网站：<a href="http://www.gzruige.com">www.gzruige.com</a>
+          </div>
+          
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script>
+    var showSection = function (currentSection) {
+      $('.J_section').addClass('hide').eq(currentSection-1).removeClass('hide')
+      $('.J_nav').removeClass('active').eq(currentSection-1).addClass('active')
+    }
+    $(function() { 
+      if (!location.search) return
+      var searh = location.search.split('?')[1]
+      var args = searh.split('&')
+      for (var i =0; i< args.length; i++) {
+        if (args[i].split('=')[0] == 'm') {
+          var currentSection = args[i].split('=')[1]
+          showSection(currentSection)
+        }
+      }
+    })
+    $('.J_nav').click(function() {
+      $('#collapse').click()
+      $('.J_nav').removeClass('active')
+      $(this).addClass('active')
+      let currentSection = $(this).attr('data-section')
+      showSection(currentSection)
+    })
+  </script>
+</body>
+</html>

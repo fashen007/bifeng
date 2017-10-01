@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <style>
+    html {
+      font-family: sans-serif;
+      font-weight: inherit;
+    }
+    body {
+      font-weight: inherit;
+    }
+    a {
+      text-decoration: none;
+      color: #666;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    /* 头部css */
+    /* 头部css */
+    .navbar-brand {
+      width: 65%;
+    }
+    .navbar-toggler{
+      padding: .2rem .5rem
+    }
+    .navbar-toggler:focus{
+      outline: transparent;
+    }
+    .navbar-brand img {
+      width: 100%;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler span {
+      display: inline-block;
+    }
+    .navbar-toggler img {
+      width: 80%;
+      max-width: 30px;
+    }
+   /* banner样式 */
+   /* banner样式 */
+    .slide {
+      margin-top: 58px;
+    }
+    .carousel-indicators li {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .carousel-indicators .active {
+      background-color: #38a7df;
+    }
+    /* 内容 */
+    /* 内容 */
+    .section-title {
+      text-align: center;
+      margin: 40px 0;
+      color: #38a7df;
+      background: url('img/title-bg.png') no-repeat center;
+      /* font-size: 1.5rem; */
+      font-size: 1.2rem;
+    }
+    .section-contain {
+      text-align: center;
+      padding: 15px;
+      padding-top: 0;
+    }
+    /* 关于我们 */
+    .about .col-sm-4 img{
+      width: 100%;
+      max-width: 117px;
+    }
+    .about .col-md-4 img{
+      width: 100%;
+      max-width: 117px;
+    }
+    .about-title {
+      padding-top: 10px;
+      font-size: 0.9rem;
+    }
+    /* 产品展示 */
+    .product>div {
+      margin-bottom: 0.5rem;
+      padding: 0;
+      padding: 0 0.5rem;
+    }
+    .product .product-wrap {
+      padding: 0.5rem;
+      background: #e9e9e9;
+    }
+    .product-wrap .p-title {
+      padding-top: 0.5rem;
+      /* font-size: 1.4rem; */
+      font-size: 1rem;
+    }
+    .product .col-6 img{
+      width: 100%;
+    }
+    .product .col-sm-4 img{
+      width: 100%;
+    }
+    .more-btn {
+      padding: 15px 0;
+      font-size: 1rem;
+      color: #999;
+      background-color: #fff;
+      border: 1px solid #bbb;
+    }
+    /* 案例 */
+    .case .case-wrap {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 1.7rem;
+    }
+    .case .case-wrap img{
+      width: 100%;
+      max-width: 590px;
+    }
+    /* 首页模态菜单 */
+    .modal-ul {
+      margin-top: 2rem;
+      width: 100%;
+      height: 100%;
+    }
+    .modal-ul li {
+      text-align: center;
+      width: 100%;
+      height: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .modal-ul li.close{
+      margin-top: 30px;
+    }
+    .modal-ul li a {
+      display: inline-block;
+      height: 100%;
+      line-height: 70px;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    .modal-ul li a .icon {
+      text-align: center;
+      display: inline-block;
+    }
+    .modal-ul li a .icon img {
+      text-align: center;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+    .modal-ul li.close a .icon img {
+      margin-right: 0;
+    }
+    .modal-ul li a .icon .text {
+      vertical-align: middle;
+    }
+    .modal-backdrop{
+      opacity:0.8 !important;
+    }
+    /* 脚部 */
+    .footer {
+      font-size: 0.9rem;
+      color: #fff;
+      height: 4rem;
+      line-height: 4rem;
+      text-align: center;
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+      <button class="navbar-toggler" id='collapse' data-toggle="modal" data-target="#navModal" type="button" data-target="#navModal" aria-controls="navModal" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> <img src="img/toggle-icon.png" alt=""></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="company.html?m=1">关于我们</a>
+          <a class="nav-item nav-link" href="product-list.html">产品展示</a>
+          <a class="nav-item nav-link" href="news.html">新闻资讯</a>
+          <a class="nav-item nav-link" href="sale.html">销售业绩</a>
+          <a class="nav-item nav-link" href="company.html?m=3">招贤纳士</a>
+          <a class="nav-item nav-link" href="company.html?m=4">客服中心</a>
+        </div>
+      </div>
+    </nav>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/slider-1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slider-1.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slider-1.jpg" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="container">
+       <div class='section-title'>关于阁锐</div>
+       <div class="row about section-contain">
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+            <a href="company.html?m=1">
+              <img src="img/introduce.png" alt="">
+              <div class='about-title'>公司介绍</div>
+            </a>
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+              <a href="company.html?m=2">
+                <img src="img/setting.png" alt="">
+                <div class='about-title'>厂房设置</div>
+              </a>
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+              <a href="company.html?m=5">
+                <img src="img/concat.png" alt="">
+                <div class='about-title'>联系我们</div>
+              </a>
+          </div>
+        </div>
+       <div class='section-title'>产品展示</div>
+       <div class="row product section-contain">
+          <div class="col-6 col-sm-6 col-md-4">
+            <a href="productdetail.html">
+              <div class='product-wrap'>
+                  <img src="img/product-1.jpg" alt="">
+                  <div class='p-title'>400A密集型铜导体母线槽</div>
+                </div>
+            </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4">
+              <a href="productdetail.html">
+                  <div class='product-wrap'>
+                      <img src="img/product-1.jpg" alt="">
+                      <div class='p-title'>400A密集型铜导体母线槽</div>
+                    </div>
+                </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4">
+              <a href="productdetail.html">
+                  <div class='product-wrap'>
+                      <img src="img/product-1.jpg" alt="">
+                      <div class='p-title'>400A密集型铜导体母线槽</div>
+                    </div>
+                </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4">
+              <a href="productdetail.html">
+                  <div class='product-wrap'>
+                      <img src="img/product-1.jpg" alt="">
+                      <div class='p-title'>400A密集型铜导体母线槽</div>
+                    </div>
+                </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4">
+              <a href="productdetail.html">
+                  <div class='product-wrap'>
+                      <img src="img/product-1.jpg" alt="">
+                      <div class='p-title'>400A密集型铜导体母线槽</div>
+                    </div>
+                </a>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4">
+              <a href="productdetail.html">
+                  <div class='product-wrap'>
+                      <img src="img/product-1.jpg" alt="">
+                      <div class='p-title'>400A密集型铜导体母线槽</div>
+                    </div>
+                </a>
+          </div>
+        </div>
+        <button type="button" class="btn btn-light btn-lg btn-block more-btn">更多产品...</button>
+        <div class='section-title'>销售案例</div>
+        <div class="row case section-contain">
+            <div class="col-12 case-wrap">
+              <a href="saledetail.html">
+                <img src="img/case-1.jpg" alt="">
+              </a>
+            </div>
+            <div class="col-12 case-wrap">
+                <a href="saledetail.html">
+                    <img src="img/case-1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class='footer'>
+        © 2017 广州锐阁电气设备有限公司 版权所有
+    </div>
+    <div class="modal fade" id="navModal" tabindex="-1" aria-hidden="true" data-backdrop='static' data-keyboard='false'>
+      <div class="modal-dialog" role="document">
+        <ul class='modal-ul'>
+          <li>
+              <a href="company.html?m=1">
+                  <span class='icon'><img src="img/icon-home.png" alt=""><span class='text'>关于我们</span></span>
+                </a>
+          </li>
+          <li>
+              <a href="product-list.html?m=1">
+                  <span class='icon'><img src="img/icon-setting.png" alt=""><span class='text'>产品展示</span> </span>
+                </a>
+          </li>
+         <li>
+            <a href="news.html?id=1">
+                <span class='icon'><img src="img/icon-news.png" alt=""><span class='text'>新闻资讯</span></span>
+              </a>
+         </li>
+         <li>
+            <a href="sale.html?m=1">
+                <span class='icon'><img src="img/icon-charts.png" alt=""><span class='text'>销售业绩</span></span>
+              </a>
+         </li>
+          <li>
+              <a href="company.html?m=3">
+                  <span class='icon'><img src="img/icon-pepole.png" alt=""><span class='text'>招贤纳士</span></span>
+                </a>
+          </li>
+          <li>
+              <a href="company.html?m=4">
+                  <span class='icon'><img src="img/icon-phone.png" alt=""><span class='text'>客服中心</span></span>
+                </a>
+          </li>
+          <li class='close'>
+              <a href="javascript:;" data-dismiss="modal">
+                  <span class='icon'><img src="img/icon-close.png" alt=""></span>
+                </a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script>
+    // banner
+    $('.carousel').carousel()
+    $(function () {
+    // 获取手指在轮播图元素上的一个滑动方向（左右）
+    // 获取界面上轮播图容器
+    var $carousels = $('.carousel');
+    var startX,endX;
+    // 在滑动的一定范围内，才切换图片
+    var offset = 50;
+    // 注册滑动事件
+    $carousels.on('touchstart',function (e) {
+        // 手指触摸开始时记录一下手指所在的坐标x
+        startX = e.originalEvent.touches[0].clientX;
+    });
+    $carousels.on('touchmove',function (e) {
+        // 目的是：记录手指离开屏幕一瞬间的位置 ，用move事件重复赋值
+        endX = e.originalEvent.touches[0].clientX;
+    });
+    $carousels.on('touchend',function (e) {
+        //console.log(endX);
+        //结束触摸一瞬间记录手指最后所在坐标x的位置 endX
+        //比较endX与startX的大小，并获取每次运动的距离，当距离大于一定值时认为是有方向的变化
+        var distance = Math.abs(startX - endX);
+        if (distance > offset){
+            //说明有方向的变化
+            //根据获得的方向 判断是上一张还是下一张出现
+            $(this).carousel(startX >endX ? 'next':'prev');
+        }
+    })
+  });
+  </script>
+ 
+</body>
+</html>
